@@ -1,0 +1,32 @@
+{
+  "name": "treasure-sms",
+  "version": "0.0.1",
+  "description": "An app to send an SMS with the code to access the treasure",
+  "main": "dist/index.js",
+  "scripts": {
+    "start:dev": "npx nodemon",
+    "start": "npm run build && node ./dist/index.js",
+    "build": "rimraf ./dist && tsc",
+    "prettier": "prettier . --write"
+  },
+  "author": "Mike Elsmore <mike.elsmore@infobip.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/sensible": "^5.5.0",
+    "@infobip-api/sdk": "^0.3.2",
+    "dayjs": "^1.11.10",
+    "discord.js": "^14.12.1",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.24.2",
+    "string-strip-html": "^8.4.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.8",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
