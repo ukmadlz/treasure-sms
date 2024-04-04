@@ -27,10 +27,19 @@ fastify.post("/", async (request: any, reply) => {
         ],
         from: process.env.FROM_NUMBER,
         text: JSON.stringify({
-            "a": uuid(),
-            "code": process.env.TREASURE_CODE,
-            "z": uuid(),
+          a: uuid(),
+          code: process.env.TREASURE_CODE,
+          z: uuid(),
         }),
+      },
+      {
+        destinations: [
+          {
+            to: request.body.treasureNumber,
+          },
+        ],
+        from: process.env.FROM_NUMBER,
+        text: "Once you have your treasure feel free to join our discord community https://infobip.com/developers/discord",
       },
     ],
   });
