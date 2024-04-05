@@ -17,6 +17,7 @@ fastify.post("/", async (request: any, reply) => {
     apiKey: String(process.env.INFOBIP_API_KEY),
     authType: AuthType.ApiKey,
   });
+  console.log(request.body.treasureNumber);
   const response = await infobip.channels.sms.send({
     messages: [
       {
@@ -43,6 +44,7 @@ fastify.post("/", async (request: any, reply) => {
       },
     ],
   });
+  console.log(response.data)
   return {};
 });
 
