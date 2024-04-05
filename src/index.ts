@@ -44,7 +44,7 @@ fastify.post("/", async (request: any, reply) => {
       },
     ],
   });
-  console.log(response.data)
+  console.log(response)
   return {};
 });
 
